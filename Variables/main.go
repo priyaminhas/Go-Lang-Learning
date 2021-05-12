@@ -30,6 +30,7 @@ func main() {
 	//inside function short assignment is possible
 	k := 100
 	fmt.Println(i, j, c, python, java,k)
+	const Pi = 3.14
 
 	boolVar =  true
 	stringVar = "Priya this is first string"
@@ -38,4 +39,6 @@ func main() {
 	fmt.Println(z)
 	//not assigned any value
 	fmt.Println(emptyVar)
+	//constant
+	fmt.Println("Hello World, I am a constant ",Pi)
 }
