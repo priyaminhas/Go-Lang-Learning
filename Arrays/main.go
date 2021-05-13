@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main()  {
 	//simple array
@@ -19,4 +21,32 @@ func main()  {
 	//changing the slices make changes to array
 	a2[0] = "Mandeepak"
 	fmt.Println(a)
+
+	//slice length and capacity
+	s := []int{45,56,24,778,45}
+	printSlice(s)
+
+	//slicing the slice
+	s = s[:3]
+	printSlice(s)
+
+	s = s[2:5]
+	printSlice(s)
+
+	//making slice with make function
+	b := make([]int,0,5)
+	printSlice(b)
+
+	//append to slice
+	b = append(b,12,34)
+	b = append(b,121,234,756)
+	printSlice(b)
+
+	for i,v:= range b {
+		fmt.Printf("b[%d] = %d  \n",i,v)
+	}
+}
+
+func printSlice(s []int){
+	fmt.Printf("length=%d, capacity=%d,  %v \n",len(s),cap(s),s)
 }
